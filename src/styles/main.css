@@ -1,1 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 @import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-sans: "Open Sans", sans-serif;
+    --font-inter: "Noto Sans Georgian", sans-serif;
+    --font-reader: "Open Sans", sans-serif;
+
+    --color-background: var(--background);
+    --color-card: var(--card);
+}
+
+:root {
+    --background: #FBF8F3;
+    --card: #DED2BC;
+}
+
+.dark {
+    --background: #161513;
+    --card: #322E29;
+}
+
+@layer base {
+    body {
+        @apply bg-background;
+    }
+    html {
+        @apply font-inter;
+    }
+}
