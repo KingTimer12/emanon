@@ -14,21 +14,46 @@
 
     --color-background: var(--background);
     --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-foreground: var(--foreground);
+    --color-border: var(--border);
+
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary-hover: var(--primary-hover);
 }
 
 :root {
     --background: #FBF8F3;
-    --card: #DED2BC;
+    --foreground: #241F19;
+
+    --primary: #8A530E;
+    --primary-foreground: #FFFBF2;
+    --primary-hover: #9C5F12;
+    
+    --card: #F4EFE6;
+    --card-foreground: #F4EFE8;
+    
+    --border: #D8CDBA;
 }
 
 .dark {
     --background: #161513;
-    --card: #322E29;
+    --foreground: #F4EFE8;
+
+    --primary: #F2B341;
+    --primary-foreground: #1B1409;
+    --primary-hover: #FFC966;
+    
+    --card: #1E1C19;
+    --card-foreground: #241F19;
+    
+    --border: #3A352F;
 }
 
 @layer base {
     body {
-        @apply bg-background;
+        @apply bg-background text-foreground;
     }
     html {
         @apply font-inter;

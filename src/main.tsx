@@ -4,7 +4,7 @@ import "./styles/main.css";
 function Main() {
   return (
     <>
-      <header class="bg-card py-1 border-b">
+      <header class="bg-card py-1 border-b border-border">
         <h1>Emanon</h1>
       </header>
       <MenubarApp />

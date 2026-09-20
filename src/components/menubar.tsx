@@ -1,4 +1,13 @@
 import { Menubar } from "@kobalte/core/menubar";
+import type { Component, JSXElement } from "solid-js";
+
+const MenuItem: Component<{ children: JSXElement }> = ({ children }) => {
+  return (
+    <Menubar.Item class="rounded flex items-center h-8 hover:outline-none hover:bg-primary-hover hover:text-primary-foreground cursor-pointer transition-colors duration-200 ease-in-out px-2 text-sm">
+      {children}
+    </Menubar.Item>
+  );
+}
 
 const MenubarApp = () => {
   return (
@@ -8,9 +17,9 @@ const MenubarApp = () => {
           File
         </Menubar.Trigger>
         <Menubar.Portal>
-          <Menubar.Content class="min-w-56 p-2 bg-card rounded-md outline-none">
-            <Menubar.Item class="rounded flex items-center h-8">New subtitles</Menubar.Item>
-            <Menubar.Item class="rounded flex items-center h-8">Open subtitles</Menubar.Item>
+          <Menubar.Content class="min-w-56 p-2 bg-card rounded-md outline-none shadow-md">
+            <MenuItem>New subtitles</MenuItem>
+            <MenuItem>Open subtitles</MenuItem>
           </Menubar.Content>
         </Menubar.Portal>
       </Menubar.Menu>
